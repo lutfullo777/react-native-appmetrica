@@ -111,6 +111,8 @@ abstract class Utils {
             }
         }
 
+        builder.withLocationTracking(false);
+
         return builder.build();
     }
 }
