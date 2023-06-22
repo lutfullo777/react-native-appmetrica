@@ -18,6 +18,8 @@ declare module "@gennadysx/react-native-appmetrica" {
         // Only Android
         maxReportsInDatabaseCount?: number,
         nativeCrashReporting?: boolean,
+        withSessionsAutoTrackingEnabled?: boolean,
+
         // Only iOS
         activationAsSessionStart?: boolean,
         sessionsAutoTracking?: boolean,
