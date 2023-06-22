@@ -16,7 +16,6 @@ declare module "@gennadysx/react-native-appmetrica" {
         statisticsSending?: boolean,
         preloadInfo?: PreloadInfo,
         // Only Android
-        installedAppCollecting?: boolean,
         maxReportsInDatabaseCount?: number,
         nativeCrashReporting?: boolean,
         // Only iOS

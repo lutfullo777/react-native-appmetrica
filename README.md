@@ -3,8 +3,8 @@ React Native bridge to the [AppMetrica](https://appmetrica.yandex.com/) on both 
 This package forked from [RNAppMetrica](https://github.com/yandex/react-native-appmetrica) for modification to newer rn versions.
 
 ### What's new here:
-  - Upgraded Native versions to 4.2.0
-  - Support for Apple Silicon M1 Macs
+  - Upgraded SDK versions to (IOS: v4.5.2, Android: v5.3.0)
+  - Support for Apple Silicon chips
   - Support for TypeScript
   - Supports only above v0.63.4
 ---
