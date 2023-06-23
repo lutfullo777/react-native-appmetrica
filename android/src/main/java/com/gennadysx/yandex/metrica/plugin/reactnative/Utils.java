@@ -31,14 +31,20 @@ abstract class Utils {
         if (configMap.hasKey("firstActivationAsUpdate")) {
             builder.handleFirstActivationAsUpdate(configMap.getBoolean("firstActivationAsUpdate"));
         }
-        if (configMap.hasKey("withSessionsAutoTrackingEnabled")) {
-            builder.withInstalledAppCollecting(configMap.getBoolean("withSessionsAutoTrackingEnabled"));
+        if (configMap.hasKey("appOpenTrackingEnabled")) {
+            builder.withAppOpenTrackingEnabled(configMap.getBoolean("appOpenTrackingEnabled"));
+        }
+        if (configMap.hasKey("sessionsAutoTrackingEnabled")) {
+            builder.withSessionsAutoTrackingEnabled(configMap.getBoolean("sessionsAutoTrackingEnabled"));
+        }
+        if (configMap.hasKey("userProfileID")) {
+            builder.withUserProfileID(configMap.getString("userProfileID"));
+        }
+        if (configMap.hasKey("locationTracking")) {
+            builder.withLocationTracking(configMap.getBoolean("locationTracking"));
         }
         if (configMap.hasKey("location")) {
             builder.withLocation(toLocation(configMap.getMap("location")));
-        }
-        if (configMap.hasKey("locationTracking")) {
-            builder.withLocationTracking(false);
         }
         if (configMap.hasKey("logs") && configMap.getBoolean("logs")) {
             builder.withLogs();

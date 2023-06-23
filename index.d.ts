@@ -15,6 +15,10 @@ declare module "@gennadysx/react-native-appmetrica" {
         sessionTimeout?: number,
         statisticsSending?: boolean,
         preloadInfo?: PreloadInfo,
+        appOpenTrackingEnabled?: boolean,
+        sessionsAutoTrackingEnabled?: boolean,
+        userProfileID?: string,
+
         // Only Android
         maxReportsInDatabaseCount?: number,
         nativeCrashReporting?: boolean,
