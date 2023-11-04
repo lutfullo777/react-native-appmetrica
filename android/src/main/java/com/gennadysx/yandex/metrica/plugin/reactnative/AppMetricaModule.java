@@ -17,6 +17,7 @@ import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.ReadableMap;
+import com.yandex.metrica.DeferredDeeplinkListener;
 import com.yandex.metrica.YandexMetrica;
 
 public class AppMetricaModule extends ReactContextBaseJavaModule {
@@ -127,4 +128,21 @@ public class AppMetricaModule extends ReactContextBaseJavaModule {
     public void setUserProfileID(String userProfileID) {
         YandexMetrica.setUserProfileID(userProfileID);
     }
+
+    @ReactMethod
+    public void getDeferredDeeplink(Promise promise) {
+        YandexMetrica.requestDeferredDeeplink(new DeferredDeeplinkListener() {
+            @Override
+            public void onDeeplinkLoaded(String deeplink) {
+                promise.resolve(deeplink);
+            }
+
+            @Override
+            public void onError(Error error, String referrer) {
+                promise.reject(error.getDescription(), referrer);
+
+            }
+        });
+    }
+
 }

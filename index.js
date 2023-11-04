@@ -71,5 +71,9 @@ export default {
 
   setUserProfileID(userProfileID) {
     AppMetrica.setUserProfileID(userProfileID);
+  },
+
+  async getDeferredDeeplink() {
+    return await AppMetrica.getDeferredDeeplink()
   }
 };

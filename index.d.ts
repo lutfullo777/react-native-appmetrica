@@ -51,6 +51,7 @@ declare module "@gennadysx/react-native-appmetrica" {
 
     // Android
     function  getLibraryApiLevel(): Promise<number>
+    function  getDeferredDeeplink(): Promise<string>
 
     function  getLibraryVersion(): Promise<string>
     function  pauseSession(): void
